@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="/css/auth.css" />
+</head>
+
+<div class="auth-page">
+  <div class="auth-card card">
+    <h1>Register</h1>
+
+    <form id="register">
+      <input
+        name="username"
+        type="text"
+        placeholder="Username"
+        minlength="3"
+        maxlength="20"
+        pattern="^[a-zA-Z0-9_]+$"
+        required
+      />
+
+      <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        name="password"
+        type="password"
+        placeholder="Password (8+ characters)"
+        minlength="8"
+        required
+      />
+
+      <input
+        name="confirmPassword"
+        type="password"
+        placeholder="Re-enter password"
+        minlength="8"
+        required
+      />
+
+      <button type="submit">Create account</button>
+    </form>
+
+    <p id="msg" class="muted"></p>
+
+    <p class="muted">
+      Already have an account?
+      <a href="/login">Login</a>
+    </p>
+  </div>
+</div>
+
+<script src="/js/register.js" defer></script>

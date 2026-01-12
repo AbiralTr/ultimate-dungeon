@@ -4,15 +4,33 @@
     <div class="header-spacer"></div>
 
     <a href="/" class="brand brand-center">
-      <span class="brand-mark">⚔</span>
       <span class="brand-name">Ultimate Dungeon</span>
     </a>
 
     <nav class="nav-links nav-right">
-      <a href="/">Home</a>
-      <a href="/login">Login</a>
-      <a href="/register">Register</a>
+      {{#unless isAuthPage}}
+        <button class="gear-btn" id="gearBtn" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m18.8-5.2l-4.2 4.2m0 6l4.2 4.2"></path>
+          </svg>
+        </button>
+      {{/unless}}
     </nav>
 
   </div>
 </header>
+
+{{#unless isAuthPage}}
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <h3>Menu</h3>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"></button>
+  </div>
+  
+  <div class="drawer-footer">
+    <button class="btn-logout" id="logoutBtn">Logout</button>
+  </div>
+</div>
+{{/unless}}

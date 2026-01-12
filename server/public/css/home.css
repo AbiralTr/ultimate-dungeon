@@ -1,0 +1,54 @@
+/* Home Page */
+.info-card {
+  background: #1a2332;
+  border: 1px solid #2a3441;
+  border-radius: 12px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  
+  width: 100%;
+  max-width: 480px;
+  min-height: 600px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  
+  text-align: center;
+}
+
+.info-card h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e4e6eb;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  max-width: 380px;
+  line-height: 1.7;
+}
+
+.info-card .btn {
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .info-card {
+    padding: 32px 24px;
+    min-height: 400px;
+  }
+  
+  .info-card h1 {
+    font-size: 2rem;
+  }
+  
+  .info-card p {
+    font-size: 1rem;
+  }
+}
